@@ -9,6 +9,7 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import ListGroup from "react-bootstrap/ListGroup";
 import Container from "react-bootstrap/Container";
 import About from "./components/About.js";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -28,6 +29,17 @@ import email from "./images/email.svg";
 import career from "./images/monitor.png";
 import location from "./images/pin.png";
 import employment from "./images/suitcase.png";
+
+
+import css from "./images/css.svg";
+import django from "./images/django.svg";
+import flask from "./images/flask.svg";
+import javascript from "./images/javascript.svg";
+import jquery from "./images/jquery.svg";
+import postgresql from "./images/postgresql.svg";
+import python from "./images/python.svg";
+import react from "./images/react.svg";
+import typescript from "./images/typescript.svg";
 
 function App() {
   return (
@@ -65,17 +77,28 @@ function App() {
           </Container>
         </Navbar>
         <Container inline-flex="true" className="profile-section">
-          <Row style={{minHeight: "600px"}}>
+          <Row style={{ minHeight: "600px" }}>
             <Col sm={1} className="side-col" width="10%"></Col>
             <Col sm={5}>
               <Card className="profile-card">
                 <Card.Header className="profile-header">
                   <div className="wrapper">
                     <div className="profile-img-wrapper">
-                      <img className="profile-img img" src={profile} alt=""></img>
+                      <img
+                        className="profile-img img"
+                        src={profile}
+                        alt=""
+                      ></img>
                     </div>
-                    <span style={{fontSize:"x-large", paddingTop: "200px",
-  fontWeight: 150}}>Leo Shin</span>
+                    <span
+                      style={{
+                        fontSize: "x-large",
+                        paddingTop: "200px",
+                        fontWeight: 150,
+                      }}
+                    >
+                      Leo Shin
+                    </span>
                   </div>
                 </Card.Header>
                 <Card.Body>
@@ -104,21 +127,21 @@ function App() {
                   </div>
                   <div class="divider div-transparent div-arrow-down"></div>
                   <div className="icon-group">
-                  <Link to="https://www.facebook.com/leo.shin.311">
-                    <img src={facebook} width="35px" alt=""></img>
-                    </Link>
+                    <a href="https://www.facebook.com/leo.shin.311">
+                      <img src={facebook} width="35px" alt=""></img>
+                    </a>
                     &nbsp;&nbsp;&middot;&nbsp;&nbsp;
-                    <Link to="https://www.instagram.com/leo8902/">
-                    <img src={instagram} width="35px" alt=""></img>
-                    </Link>
+                    <a href="https://www.instagram.com/leo8902/">
+                      <img src={instagram} width="35px" alt=""></img>
+                    </a>
                     &nbsp;&nbsp;&middot;&nbsp;&nbsp;
-                    <Link to="https://www.linkedin.com/in/leo-shin">
-                    <img src={linkedin} width="35px" alt=""></img>
-                    </Link>
+                    <a href="https://www.linkedin.com/in/leo-shin">
+                      <img src={linkedin} width="35px" alt=""></img>
+                    </a>
                     &nbsp;&nbsp;&middot;&nbsp;&nbsp;
-                    <Link to="https://github.com/Shin-Leo">
-                    <img src={github} width="35px" alt=""></img>
-                    </Link>
+                    <a href="https://github.com/Shin-Leo">
+                      <img src={github} width="35px" alt=""></img>
+                    </a>
                     &nbsp;&nbsp;&middot;&nbsp;&nbsp;
                     <img src={email} width="35px" alt=""></img>
                   </div>
@@ -127,20 +150,22 @@ function App() {
             </Col>
             <Col sm={4} className="text-col">
               <div id="generated-text">
-              <Typewriter
-      onInit={(typewriter) => {
-        typewriter
-          .typeString("Hi!")
-          .pauseFor(500)
-          .typeString(" My name is Leo")
-          .pauseFor(250)
-          .typeString(" and I like to build software.")
-          .pauseFor(500)
-          .typeString(" Feel free to contact me or check out some of my projects below!")
-          .start();
-      }}
-      options={{delay: 125}}
-    />
+                <Typewriter
+                  onInit={(typewriter) => {
+                    typewriter
+                      .typeString("Hi!")
+                      .pauseFor(500)
+                      .typeString(" My name is Leo")
+                      .pauseFor(250)
+                      .typeString(" and I like to build software.")
+                      .pauseFor(500)
+                      .typeString(
+                        " Feel free to contact me or check out some of my projects below!"
+                      )
+                      .start();
+                  }}
+                  options={{ delay: 100 }}
+                />
               </div>
             </Col>
             <Col sm={1} className="side-col" width="10%"></Col>
@@ -162,8 +187,17 @@ function App() {
             </Col>
             <Col sm={4}>
               <Card>
+                <Card.Header>Tech Stack</Card.Header>
                 <Card.Body>
-                  <Card.Text>Techonologies Used</Card.Text>
+                  <ListGroup variant="flush">
+                    <ListGroup.Item><span>
+                      Languages<Col><Row><img src={{python}}></img></Row><Row><span>Python</span></Row></Col>
+                      <Col><Row><img src={{javascript}}></img></Row><Row><span>Javascript</span></Row></Col>
+                      <Col><Row><img src={{typescript}}></img></Row><Row><span>Typescript</span></Row></Col>
+                    </span></ListGroup.Item>
+                    <ListGroup.Item><span>Frameworks & Libraries<Col><Row></Row><Row></Row></Col></span></ListGroup.Item>
+                    <ListGroup.Item><span>APIs<Col><Row></Row><Row></Row></Col></span></ListGroup.Item>
+                  </ListGroup>{" "}
                   <div className="btn from-right">Check it Out!</div>
                 </Card.Body>
               </Card>
