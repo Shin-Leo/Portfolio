@@ -14,6 +14,7 @@ nav {
 body {
   --def: #96B7C4; 	
 	--inv: #fff;
+  background-color: aliceblue;
 }
 .profile-card {
   flex-direction: column;
@@ -21,6 +22,12 @@ body {
 
 .project-card {
   padding: 2%;
+  min-width: 80%;
+}
+
+.project-card-reverse {
+  padding: 2%;
+  min-width: 80%;
 }
 .card-img-overlay {
   padding: 0;
@@ -36,13 +43,6 @@ body {
 }
 
 
-.card {
-  backdrop-filter: blur(4px) saturate(200%);
-  -webkit-backdrop-filter: blur(4px) saturate(200%);
-  background-color: rgba(162, 201, 209, 0.42);
-  
-}
-
 .card-title {
   width: 100%;
   margin: 0;
@@ -53,6 +53,57 @@ body {
   padding-bottom: 2%;
   background-color: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(3px) saturate(100%) contrast(45%) brightness(130%);
+}
+
+.profile-section {
+  padding: 2%;
+  margin-top: 48px;
+  min-width: 80%;
+}
+
+.profile-card {
+  backdrop-filter: blur(0px) saturate(180%);
+  -webkit-backdrop-filter: blur(0px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+.profile-header {
+  justify-content: center;
+}
+
+.intro-point {
+  padding: 4px;
+}
+.profile-img {
+  border-radius: 50%;
+  width: 40%;
+}
+
+.card {
+  backdrop-filter: blur(0px) saturate(50%);
+  -webkit-backdrop-filter: blur(0px) saturate(50%);
+  background-color: rgba(162, 201, 209, 0.42);
+  
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .btn {		
@@ -77,7 +128,7 @@ body {
 
 .btn:hover {
 	color: var(--def);
-	transition-delay: .5s;
+	transition-delay: 0s;
 }
 
 .btn:hover:before {
@@ -115,6 +166,14 @@ body {
 #root > div > nav > div {
   justify-content: end;
   margin-right: 0;
+}
+
+.lo-div {
+  margin: 0px;
+}
+
+.profile-header {
+  min-height: 40%;
 }
 
 
