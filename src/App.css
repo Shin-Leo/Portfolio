@@ -58,7 +58,14 @@ body {
 .profile-section {
   padding: 2%;
   margin-top: 48px;
-  min-width: 80%;
+  min-width: 100%;
+  background-color: #e5ecf1;
+}
+
+#generated-text {
+  font-size: xxx-large;
+  font-family: 'Vollkorn', serif;
+
 }
 
 .profile-card {
@@ -81,6 +88,17 @@ body {
   width: 40%;
 }
 
+.side-col {
+  min-width: 12%;
+}
+
+
+#root > div > div.profile-section.container > div > div.col-sm-5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 100px;
+}
 .card {
   backdrop-filter: blur(0px) saturate(50%);
   -webkit-backdrop-filter: blur(0px) saturate(50%);

@@ -15,6 +15,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import profile from "./images/profile-image.jpg";
 
+import Typewriter from "typewriter-effect";
+
 import notation from "./images/notation.png";
 import graphs from "./images/graphs.png";
 
@@ -64,49 +66,79 @@ function App() {
           </Container>
         </Navbar>
         <Container inline-flex="true" className="profile-section">
-<Row>
-                <Col sm={5}>
-                <Card className="profile-card">
-                    <Card.Header className="profile-header">
-                      <div className="wrapper">
-                        <Card.Img
-                          variant="top"
-                          className="profile-img"
-                          src={profile}
-                        />
-                      </div>
-                    </Card.Header>
-                    <Card.Body>
-                      <Card.Title>Leo Shin</Card.Title>
-                      <div className="intro-info">
-                      <span className="intro-point"><img className="icon" alt="" width="15px" src={career}></img> Software
-                          Engineer</span>
-                          <span className="intro-point"><img alt="" width="15px" src={location}></img>{" "}
-                          University of British Columbia
-                          </span>
-                          <span className="intro-point">
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"Combined Major in Computer Science and Business"}</span>
-                          <span className="intro-point"><img alt="" width="15px" src={employment}></img>{" "}
-                          Looking for Summer 2022 opportunities!</span>
-                          </div>
-                      <div className="icon-group">
-                        <img src={facebook} width="35px" alt=""></img>
-                        &nbsp;&nbsp;&middot;&nbsp;&nbsp;
-                        <img src={instagram} width="35px" alt=""></img>
-                        &nbsp;&nbsp;&middot;&nbsp;&nbsp;
-                        <img src={linkedin} width="35px" alt=""></img>
-                        &nbsp;&nbsp;&middot;&nbsp;&nbsp;
-                        <img src={github} width="35px" alt=""></img>
-                        &nbsp;&nbsp;&middot;&nbsp;&nbsp;
-                        <img src={email} width="35px" alt=""></img>
-                      </div>
-                    </Card.Body>
-                </Card>
-                </Col>
-                <Col sm={7}>
-                </Col>
-                </Row>
-          </Container>
+          <Row>
+            <Col sm={1} className="side-col" width="10%"></Col>
+            <Col sm={4}>
+              <Card className="profile-card">
+                <Card.Header className="profile-header">
+                  <div className="wrapper">
+                    <Card.Img
+                      variant="top"
+                      className="profile-img"
+                      src={profile}
+                    />
+                  </div>
+                </Card.Header>
+                <Card.Body>
+                  <Card.Title>Leo Shin</Card.Title>
+                  <div className="intro-info">
+                    <span className="intro-point">
+                      <img
+                        className="icon"
+                        alt=""
+                        width="15px"
+                        src={career}
+                      ></img>{" "}
+                      Software Engineer
+                    </span>
+                    <span className="intro-point">
+                      <img alt="" width="15px" src={location}></img> University
+                      of British Columbia
+                    </span>
+                    <span className="intro-point">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      {"Combined Major in Computer Science and Business"}
+                    </span>
+                    <span className="intro-point">
+                      <img alt="" width="15px" src={employment}></img> Looking
+                      for Summer 2022 opportunities!
+                    </span>
+                  </div>
+                  <div className="icon-group">
+                    <img src={facebook} width="35px" alt=""></img>
+                    &nbsp;&nbsp;&middot;&nbsp;&nbsp;
+                    <img src={instagram} width="35px" alt=""></img>
+                    &nbsp;&nbsp;&middot;&nbsp;&nbsp;
+                    <img src={linkedin} width="35px" alt=""></img>
+                    &nbsp;&nbsp;&middot;&nbsp;&nbsp;
+                    <img src={github} width="35px" alt=""></img>
+                    &nbsp;&nbsp;&middot;&nbsp;&nbsp;
+                    <img src={email} width="35px" alt=""></img>
+                  </div>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col sm={5}>
+              <div id="generated-text">
+              <Typewriter
+      onInit={(typewriter) => {
+        typewriter
+          .typeString("Hi!")
+          .pauseFor(500)
+          .typeString(" My name is Leo")
+          .pauseFor(250)
+          .typeString(" and I like to build software.")
+          .pauseFor(500)
+          .typeString(" Feel free to contact me or check out some of my projects below!")
+          .start();
+      }}
+      options={{delay: 150}}
+    />
+              </div>
+            </Col>
+            <Col sm={1} className="side-col" width="10%"></Col>
+          </Row>
+        </Container>
         <Container inline-flex="true" className="project-card">
           <Row>
             <Col sm={8}>
