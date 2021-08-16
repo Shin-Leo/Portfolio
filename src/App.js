@@ -125,7 +125,7 @@ function App() {
                       for Summer 2022 opportunities!
                     </span>
                   </div>
-                  <div class="divider div-transparent div-arrow-down"></div>
+                  <div className="divider div-transparent div-arrow-down"></div>
                   <div className="icon-group">
                     <a href="https://www.facebook.com/leo.shin.311">
                       <img src={facebook} width="35px" alt=""></img>
@@ -207,8 +207,10 @@ function App() {
                     </ListGroup.Item>
                     <ListGroup.Item>
                       <span className="tech-stack-headers">APIs</span><span className="tech-stack"><Row><Col><a href="https://github.com/0xfe/vexflow">Vexflow.js</a></Col><Col><a href="https://github.com/tonaljs/tonal">Tonal.js</a></Col><Col><a href="https://github.com/Tonejs/Tone.js/">Tone.js</a></Col></Row><span></span></span></ListGroup.Item>
+                      <ListGroup.Item className="repo-btn">
+                      <div className="btn from-right">Check it Out!<a href="https://github.com/Shin-Leo/reHarmonizer"><span className="link-span"></span></a></div>
+                  </ListGroup.Item>
                   </ListGroup>{" "}
-                  <div className="btn from-right">Check it Out!</div>
                 </Card.Body>
               </Card>
             </Col>
@@ -248,8 +250,10 @@ function App() {
                     </ListGroup.Item>
                     <ListGroup.Item>
                       <span className="tech-stack-headers">APIs</span><span className="tech-stack"><Row><Col>yfinance.py</Col><Col>Chart.js</Col></Row><span></span></span></ListGroup.Item>
+                    <ListGroup.Item className="repo-btn">
+                    <div className="btn from-right">Check it Out!<a href="https://github.com/Shin-Leo/optionsPOrtfolio"><span className="link-span"></span></a></div>
+                    </ListGroup.Item>
                   </ListGroup>{" "}
-                  <div className="btn from-left">Check it Out!</div>
                 </Card.Body>
               </Card>
             </Col>

@@ -356,6 +356,7 @@ body {
 
 .from-right, .from-left {
   margin-top: 10px;
+  position:relative; 
 }
 
 .card-header {
@@ -366,5 +367,31 @@ a { color: inherit;
     text-decoration: none; } 
 
 .intro-span {
-  background-color: aliceblue!important;
+  background-color: rgba(233, 233, 227, 0.877);
+}
+
+.repo-btn {
+  width: 100%;
+  margin-top: 5px;
+  padding: 0;
+  background-color: transparent;
+
+}
+
+#root > div > div.project-card.container > div > div.col-sm-4 > div > div.card-body > div > div.repo-btn.list-group-item {
+  --def: #96B7C4; 	
+	--inv: #fff;
+  background-color: --inv;
+}
+
+#root > div > div.project-card.container > div > div.col-sm-4 > div > div.card-body > div > div:nth-child(1) {
+  min-height: 160px;
+}
+.link-span  {
+    position:absolute; 
+    width:100%;
+    height:100%;
+    top:0;
+    left: 0;
+    z-index: 1;
 }
