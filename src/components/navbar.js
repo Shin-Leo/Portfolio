@@ -1,16 +1,16 @@
 import React from 'react';
-import {  Link } from "react-router-dom";
-const navbar= () =>{
+import {  Link } from "react-scroll";
+const Navbar = () =>{
   return (
   <div>
     <li>
-      <Link to="/">About</Link>
+      <Link to="/" spy={true} smooth={true}>About</Link>
     </li>
     <li>
-      <Link to="/projects">Projects</Link>
+      <Link to="/projects" spy={true} smooth={true}>Projects</Link>
     </li>
     <li>
-      <Link to="/resume">Resume</Link>
+      <Link to="resume-div" spy={true} smooth={true}>Resume</Link>
     </li>
     </div>
   )}

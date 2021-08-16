@@ -2,13 +2,11 @@ import React from "react";
 // Import the BrowserRouter, Route and Link components
 import { BrowserRouter, Route } from "react-router-dom";
 import Projects from "./components/Projects.js";
-import Resume from "./components/Resume.js";
 import Navbar from "react-bootstrap/Navbar";
 import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Nav from "react-bootstrap/Nav";
-import NavDropdown from "react-bootstrap/NavDropdown";
 import ListGroup from "react-bootstrap/ListGroup";
 import Container from "react-bootstrap/Container";
 import About from "./components/About.js";
@@ -16,7 +14,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import profile from "./images/profile-image.jpg";
 import Typewriter from "typewriter-effect";
-import Email from "./components/Email.js"
+import Email from "./components/Email.js";
+import {Link} from "react-scroll"
 
 import notation from "./images/notation.png";
 import graphs from "./images/graphs.png";
@@ -25,10 +24,9 @@ import facebook from "./images/facebook.svg";
 import instagram from "./images/instagram.svg";
 import linkedin from "./images/linkedin.svg";
 import github from "./images/github.svg";
-import career from "./images/monitor.png";
-import location from "./images/pin.png";
-import employment from "./images/briefcase.png";
-
+import career from "./images/monitor.svg";
+import location from "./images/pin.svg";
+import employment from "./images/briefcase.svg";
 
 import css from "./images/css.svg";
 import django from "./images/django.svg";
@@ -41,13 +39,13 @@ import panda from "./images/panda.svg";
 import react from "./images/react.svg";
 import typescript from "./images/typescript.svg";
 
+
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
         <Route exact path="/" component={About} />
         <Route path="/projects" component={Projects} />
-        <Route path="/resume" component={Resume} />
         <Navbar collapseOnSelect expand="lg">
           <Container>
             <Navbar.Brand href="#home"></Navbar.Brand>
@@ -55,23 +53,9 @@ function App() {
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="me-auto"></Nav>
               <Nav>
-                <Nav.Link href="/" className="item">
-                  About
-                </Nav.Link>{" "}
-                <Nav.Link href="/Projects" className="item">
-                  Projects
-                </Nav.Link>
-                <NavDropdown title="" id="collasible-nav-dropdown">
-                  <NavDropdown.Item href="/reharmonizer">
-                    reharmonizer
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="/optionsPortfolio">
-                    optionsPortfolio
-                  </NavDropdown.Item>
-                </NavDropdown>
-                <Nav.Link href="/Resume" className="item">
-                  Resume
-                </Nav.Link>
+              <Link to="about" spy={true} smooth={true} duration={500}>About &nbsp;&middot;&nbsp;</Link>
+              <Link to="projects" spy={true} smooth={true} duration={500}>Projects &nbsp;&middot;&nbsp;</Link> 
+                <Link to="resume-div" spy={true} smooth={true} duration={150} delay={0}>Resume</Link>
               </Nav>
             </Navbar.Collapse>
           </Container>
@@ -113,16 +97,30 @@ function App() {
                       &nbsp; Software Engineer
                     </span>
                     <span className="intro-point">
-                      <img alt="" width="25px" src={location}></img> &nbsp; University
-                      of British Columbia
+                      <img
+                        className="icon"
+                        alt=""
+                        width="25px"
+                        src={location}
+                      ></img>{" "}
+                      &nbsp; University of British Columbia
                     </span>
                     <span className="intro-point">
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      {<span style={{fontStyle:"italic"}}>&nbsp; Combined Major in Computer Science and Business</span>}
+                      {
+                        <span style={{ fontStyle: "italic" }}>
+                          &nbsp; Combined Major in Computer Science and Business
+                        </span>
+                      }
                     </span>
                     <span className="intro-point">
-                      <img alt="" width="25px" src={employment}></img>&nbsp; Looking
-                      for Summer 2022 opportunities!
+                      <img
+                        alt=""
+                        className="icon"
+                        width="25px"
+                        src={employment}
+                      ></img>
+                      &nbsp; Looking for Summer 2022 opportunities!
                     </span>
                   </div>
                   <div className="divider div-transparent div-arrow-down"></div>
@@ -159,14 +157,17 @@ function App() {
                       .typeString(`<span class="intro-span" >Leo</span>`)
                       .pauseFor(250)
                       .typeString(" and I like to ")
-                      .typeString(`<span class="intro-span" >build software.</span>`)
-                      .pauseFor(500)
                       .typeString(
-                        " Feel free to "
+                        `<span class="intro-span" >build software.</span>`
                       )
+                      .pauseFor(500)
+                      .typeString(" Feel free to ")
                       .typeString(`<span class="intro-span">contact me</span>`)
                       .typeString(" or check out some of my ")
-                      .typeString(`<span class="intro-span">projects below!</span>`).start();
+                      .typeString(
+                        `<span class="intro-span">projects below!</span>`
+                      )
+                      .start();
                   }}
                   options={{ delay: 100 }}
                 />
@@ -176,6 +177,7 @@ function App() {
           </Row>
         </Container>
         <Container inline-flex="true" className="project-card">
+        <div id="projects"></div>
           <Row>
             <Col sm={8}>
               <Card className="bg-dark text-white">
@@ -194,22 +196,113 @@ function App() {
                 <Card.Header>Tech Stack</Card.Header>
                 <Card.Body>
                   <ListGroup variant="flush">
-                    <ListGroup.Item><span className="tech-stack-headers">Languages</span><span className="tech-stack">
-                      <Col className="col-tech-icon"><Row className="row-tech-icon"><img  alt="" className="tech-icon" src={python}></img></Row><Row><span className="tech-stack">Python</span></Row></Col>
-                      <Col className="col-tech-icon"><Row className="row-tech-icon"><img  alt="" className="tech-icon" src={javascript}></img></Row><Row><span className="tech-stack">Javascript</span></Row></Col>
-                      <Col className="col-tech-icon"><Row className="row-tech-icon"><img  alt="" className="tech-icon" src={typescript}></img></Row><Row><span className="tech-stack">Typescript</span></Row></Col>
-                    </span></ListGroup.Item>
-                    <ListGroup.Item><span className="tech-stack-headers">Frameworks & Libraries</span><span className="tech-stack">
-                    <Col className="col-tech-icon"><Row className="row-tech-icon"><img alt="" className="tech-icon" src={flask}></img></Row><Row><span className="tech-stack">Flask</span></Row></Col>
-                      <Col className="col-tech-icon"><Row className="row-tech-icon"><img alt="" className="tech-icon" src={react}></img></Row><Row><span className="tech-stack">React</span></Row></Col>
-                      <Col className="col-tech-icon"><Row className="row-tech-icon"><img alt="" className="tech-icon" src={jquery}></img></Row><Row><span className="tech-stack">jQuery</span></Row></Col>
+                    <ListGroup.Item>
+                      <span className="tech-stack-headers">Languages</span>
+                      <span className="tech-stack">
+                        <Col className="col-tech-icon">
+                          <Row className="row-tech-icon">
+                            <img
+                              alt=""
+                              className="tech-icon"
+                              src={python}
+                            ></img>
+                          </Row>
+                          <Row>
+                            <span className="tech-stack">Python</span>
+                          </Row>
+                        </Col>
+                        <Col className="col-tech-icon">
+                          <Row className="row-tech-icon">
+                            <img
+                              alt=""
+                              className="tech-icon"
+                              src={javascript}
+                            ></img>
+                          </Row>
+                          <Row>
+                            <span className="tech-stack">Javascript</span>
+                          </Row>
+                        </Col>
+                        <Col className="col-tech-icon">
+                          <Row className="row-tech-icon">
+                            <img
+                              alt=""
+                              className="tech-icon"
+                              src={typescript}
+                            ></img>
+                          </Row>
+                          <Row>
+                            <span className="tech-stack">Typescript</span>
+                          </Row>
+                        </Col>
                       </span>
                     </ListGroup.Item>
                     <ListGroup.Item>
-                      <span className="tech-stack-headers">APIs</span><span className="tech-stack"><Row><Col><a href="https://github.com/0xfe/vexflow">Vexflow.js</a></Col><Col><a href="https://github.com/tonaljs/tonal">Tonal.js</a></Col><Col><a href="https://github.com/Tonejs/Tone.js/">Tone.js</a></Col></Row><span></span></span></ListGroup.Item>
-                      <ListGroup.Item className="repo-btn">
-                      <div className="btn from-right">Check it Out!<a href="https://github.com/Shin-Leo/reHarmonizer"><span className="link-span"></span></a></div>
-                  </ListGroup.Item>
+                      <span className="tech-stack-headers">
+                        Frameworks & Libraries
+                      </span>
+                      <span className="tech-stack">
+                        <Col className="col-tech-icon">
+                          <Row className="row-tech-icon">
+                            <img alt="" className="tech-icon" src={flask}></img>
+                          </Row>
+                          <Row>
+                            <span className="tech-stack">Flask</span>
+                          </Row>
+                        </Col>
+                        <Col className="col-tech-icon">
+                          <Row className="row-tech-icon">
+                            <img alt="" className="tech-icon" src={react}></img>
+                          </Row>
+                          <Row>
+                            <span className="tech-stack">React</span>
+                          </Row>
+                        </Col>
+                        <Col className="col-tech-icon">
+                          <Row className="row-tech-icon">
+                            <img
+                              alt=""
+                              className="tech-icon"
+                              src={jquery}
+                            ></img>
+                          </Row>
+                          <Row>
+                            <span className="tech-stack">jQuery</span>
+                          </Row>
+                        </Col>
+                      </span>
+                    </ListGroup.Item>
+                    <ListGroup.Item>
+                      <span className="tech-stack-headers">APIs</span>
+                      <span className="tech-stack">
+                        <Row>
+                          <Col>
+                            <a href="https://github.com/0xfe/vexflow">
+                              Vexflow.js
+                            </a>
+                          </Col>
+                          <Col>
+                            <a href="https://github.com/tonaljs/tonal">
+                              Tonal.js
+                            </a>
+                          </Col>
+                          <Col>
+                            <a href="https://github.com/Tonejs/Tone.js/">
+                              Tone.js
+                            </a>
+                          </Col>
+                        </Row>
+                        <span></span>
+                      </span>
+                    </ListGroup.Item>
+                    <ListGroup.Item className="repo-btn">
+                      <div className="btn from-right">
+                        Check it Out!
+                        <a href="https://github.com/Shin-Leo/reHarmonizer">
+                          <span className="link-span"></span>
+                        </a>
+                      </div>
+                    </ListGroup.Item>
                   </ListGroup>{" "}
                 </Card.Body>
               </Card>
@@ -234,30 +327,120 @@ function App() {
             </Col>
             <Col sm={4}>
               <Card>
-              <Card.Header>Tech Stack</Card.Header>
+                <Card.Header>Tech Stack</Card.Header>
                 <Card.Body>
-                <ListGroup variant="flush">
-                    <ListGroup.Item><span className="tech-stack-headers">Languages</span><span className="tech-stack">
-                      <Col className="col-tech-icon"><Row className="row-tech-icon"><img  alt="" className="tech-icon" src={python}></img></Row><Row><span className="tech-stack">Python</span></Row></Col>
-                      <Col className="col-tech-icon"><Row className="row-tech-icon"><img  alt="" className="tech-icon" src={javascript}></img></Row><Row><span className="tech-stack">Javascript</span></Row></Col>
-                      <Col className="col-tech-icon"><Row className="row-tech-icon"><img  alt="" className="tech-icon" src={css}></img></Row><Row><span className="tech-stack">CSS</span></Row></Col>
-                    </span></ListGroup.Item>
-                    <ListGroup.Item><span className="tech-stack-headers">Frameworks & Libraries</span><span className="tech-stack">
-                    <Col className="col-tech-icon"><Row className="row-tech-icon"><img alt="" className="tech-icon" src={django} style={{width:"60px"}}></img></Row><Row><span className="tech-stack">Django</span></Row></Col>
-                      <Col className="col-tech-icon"><Row className="row-tech-icon"><img alt="" className="tech-icon" src={panda}></img></Row><Row><span className="tech-stack">Pandas</span></Row></Col>
-                      <Col className="col-tech-icon"><Row className="row-tech-icon"><img alt="" className="tech-icon" src={postgresql}></img></Row><Row><span className="tech-stack">postgreSQL</span></Row></Col>
+                  <ListGroup variant="flush">
+                    <ListGroup.Item>
+                      <span className="tech-stack-headers">Languages</span>
+                      <span className="tech-stack">
+                        <Col className="col-tech-icon">
+                          <Row className="row-tech-icon">
+                            <img
+                              alt=""
+                              className="tech-icon"
+                              src={python}
+                            ></img>
+                          </Row>
+                          <Row>
+                            <span className="tech-stack">Python</span>
+                          </Row>
+                        </Col>
+                        <Col className="col-tech-icon">
+                          <Row className="row-tech-icon">
+                            <img
+                              alt=""
+                              className="tech-icon"
+                              src={javascript}
+                            ></img>
+                          </Row>
+                          <Row>
+                            <span className="tech-stack">Javascript</span>
+                          </Row>
+                        </Col>
+                        <Col className="col-tech-icon">
+                          <Row className="row-tech-icon">
+                            <img alt="" className="tech-icon" src={css}></img>
+                          </Row>
+                          <Row>
+                            <span className="tech-stack">CSS</span>
+                          </Row>
+                        </Col>
                       </span>
                     </ListGroup.Item>
                     <ListGroup.Item>
-                    <span className="tech-stack-headers">APIs</span><span className="tech-stack"><Row><Col><a href="https://github.com/ranaroussi/yfinance">yfinance</a></Col><Col><a href="https://github.com/chartjs/Chart.js">Chart.js</a></Col></Row><span></span></span></ListGroup.Item>
+                      <span className="tech-stack-headers">
+                        Frameworks & Libraries
+                      </span>
+                      <span className="tech-stack">
+                        <Col className="col-tech-icon">
+                          <Row className="row-tech-icon">
+                            <img
+                              alt=""
+                              className="tech-icon"
+                              src={django}
+                              style={{ width: "60px" }}
+                            ></img>
+                          </Row>
+                          <Row>
+                            <span className="tech-stack">Django</span>
+                          </Row>
+                        </Col>
+                        <Col className="col-tech-icon">
+                          <Row className="row-tech-icon">
+                            <img alt="" className="tech-icon" src={panda}></img>
+                          </Row>
+                          <Row>
+                            <span className="tech-stack">Pandas</span>
+                          </Row>
+                        </Col>
+                        <Col className="col-tech-icon">
+                          <Row className="row-tech-icon">
+                            <img
+                              alt=""
+                              className="tech-icon"
+                              src={postgresql}
+                            ></img>
+                          </Row>
+                          <Row>
+                            <span className="tech-stack">postgreSQL</span>
+                          </Row>
+                        </Col>
+                      </span>
+                    </ListGroup.Item>
+                    <ListGroup.Item>
+                      <span className="tech-stack-headers">APIs</span>
+                      <span className="tech-stack">
+                        <Row>
+                          <Col>
+                            <a href="https://github.com/ranaroussi/yfinance">
+                              yfinance
+                            </a>
+                          </Col>
+                          <Col>
+                            <a href="https://github.com/chartjs/Chart.js">
+                              Chart.js
+                            </a>
+                          </Col>
+                        </Row>
+                        <span></span>
+                      </span>
+                    </ListGroup.Item>
                     <ListGroup.Item className="repo-btn">
-                    <div className="btn from-right">Check it Out!<a href="https://github.com/Shin-Leo/optionsPOrtfolio"><span className="link-span"></span></a></div>
+                      <div className="btn from-right">
+                        Check it Out!
+                        <a href="https://github.com/Shin-Leo/optionsPOrtfolio">
+                          <span className="link-span"></span>
+                        </a>
+                      </div>
                     </ListGroup.Item>
                   </ListGroup>{" "}
                 </Card.Body>
               </Card>
             </Col>
           </Row>
+        </Container>
+        <Container>
+          <div id="resume-div"></div>
         </Container>
       </div>
     </BrowserRouter>
