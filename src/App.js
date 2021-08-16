@@ -27,7 +27,7 @@ import linkedin from "./images/linkedin.svg";
 import github from "./images/github.svg";
 import career from "./images/monitor.png";
 import location from "./images/pin.png";
-import employment from "./images/suitcase.png";
+import employment from "./images/briefcase.png";
 
 
 import css from "./images/css.svg";
@@ -110,18 +110,18 @@ function App() {
                         width="25px"
                         src={career}
                       ></img>{" "}
-                      Software Engineer
+                      &nbsp; Software Engineer
                     </span>
                     <span className="intro-point">
-                      <img alt="" width="25px" src={location}></img> University
+                      <img alt="" width="25px" src={location}></img> &nbsp; University
                       of British Columbia
                     </span>
                     <span className="intro-point">
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      {<span style={{fontStyle:"italic"}}>Combined Major in Computer Science and Business</span>}
+                      {<span style={{fontStyle:"italic"}}>&nbsp; Combined Major in Computer Science and Business</span>}
                     </span>
                     <span className="intro-point">
-                      <img alt="" width="25px" src={employment}></img> Looking
+                      <img alt="" width="25px" src={employment}></img>&nbsp; Looking
                       for Summer 2022 opportunities!
                     </span>
                   </div>

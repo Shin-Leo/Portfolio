@@ -14,7 +14,7 @@ nav {
 body {
   --def: #96B7C4; 	
 	--inv: #fff;
-  background-color: aliceblue;
+  background-color: #FEFEFC;
 }
 
 .profile-card {
@@ -63,13 +63,12 @@ body {
 .card-text, .card-title {
   padding-left: 5%;
   padding-bottom: 2%;
-  background-color: rgba(255, 255, 255, 0.3);
+  background: none;
   backdrop-filter: blur(3px) saturate(100%) contrast(45%) brightness(130%);
 }
 
 .profile-section {
-  padding: 2%;
-  margin-top: 48px;
+  padding: 5%;
   min-width: 100%;
   background-color: #e5ecf1;
 }
@@ -79,6 +78,7 @@ body {
   font-family: 'Vollkorn', serif;
   width:100%;
   text-align: justify;
+  color: #455F73;
 }
 
 .tech-stack-headers {
@@ -116,7 +116,7 @@ body {
 .profile-img-wrapper {
   height: 250px;
   width: 250px;
-  background-color: rgba(255, 255, 255, 0.06);
+  background-color:  rgb(243 243 237 / 10%);
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
   border-radius: 50%;
@@ -155,7 +155,7 @@ body {
 	right: 5%;
 	width: 90%;
 	height: 1px;
-	background-image: linear-gradient(to right, transparent, rgb(48,49,51), transparent);
+	background-image: linear-gradient(to right, transparent, #ffffff, transparent);
 }
 
 .div-arrow-down:after
@@ -168,9 +168,9 @@ body {
 	width: 14px;
 	height: 14px;
 	transform: rotate(45deg);
-	background-color: white;
-	border-bottom: 1px solid rgb(48,49,51);
-	border-right: 1px solid rgb(48,49,51);
+	background-color: #BCC5CC;
+	border-bottom: 1px solid rgb(255, 255, 255);
+	border-right: 1px solid rgb(255, 255, 255);
 }
 
 #root > div > div.project-card-reverse.container > div > div.col-sm-4 > div > div.card-body > div > div:nth-child(2) > span.tech-stack > div:nth-child(2) > div:nth-child(2) > span {
@@ -185,12 +185,12 @@ body {
   align-items: center;
 }
 .card {
-  backdrop-filter: blur(0px) saturate(50%);
-  -webkit-backdrop-filter: blur(0px) saturate(50%);
-  background-color: rgba(162, 201, 209, 0.42);
+  backdrop-filter: blur(4px) saturate(50%);
+  -webkit-backdrop-filter: blur(4px) saturate(50%);
+  background-color:  #455F73;
   height: 100%;
   width: 100%;
-  
+  border: none;
 }
 
 .card-title {
@@ -224,6 +224,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   padding-top: 10px;
+  color: #FEFEFC;
 }
 
 
@@ -365,6 +366,7 @@ body {
 
 .card-header {
   font-weight: bold;
+  background-color: #BCC5CC;
 }
 
 a { color: inherit;
@@ -380,12 +382,6 @@ a { color: inherit;
   padding: 0;
   background-color: transparent;
 
-}
-
-#root > div > div.project-card.container > div > div.col-sm-4 > div > div.card-body > div > div.repo-btn.list-group-item {
-  --def: #96B7C4; 	
-	--inv: #fff;
-  background-color: --inv;
 }
 
 #root > div > div.project-card.container > div > div.col-sm-4 > div > div.card-body > div > div:nth-child(1) {
