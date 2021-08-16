@@ -173,6 +173,10 @@ body {
 	border-right: 1px solid rgb(48,49,51);
 }
 
+#root > div > div.project-card-reverse.container > div > div.col-sm-4 > div > div.card-body > div > div:nth-child(2) > span.tech-stack > div:nth-child(2) > div:nth-child(2) > span {
+  margin-top: 4px;
+}
+
 
 
 #root > div > div.profile-section.container > div > div.col-sm-5 {

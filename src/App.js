@@ -16,6 +16,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import profile from "./images/profile-image.jpg";
 import Typewriter from "typewriter-effect";
+import Email from "./components/Email.js"
 
 import notation from "./images/notation.png";
 import graphs from "./images/graphs.png";
@@ -24,8 +25,6 @@ import facebook from "./images/facebook.svg";
 import instagram from "./images/instagram.svg";
 import linkedin from "./images/linkedin.svg";
 import github from "./images/github.svg";
-import email from "./images/email.svg";
-
 import career from "./images/monitor.png";
 import location from "./images/pin.png";
 import employment from "./images/suitcase.png";
@@ -38,6 +37,7 @@ import javascript from "./images/javascript.svg";
 import jquery from "./images/jquery.svg";
 import postgresql from "./images/postgresql.svg";
 import python from "./images/python.svg";
+import panda from "./images/panda.svg";
 import react from "./images/react.svg";
 import typescript from "./images/typescript.svg";
 
@@ -118,7 +118,7 @@ function App() {
                     </span>
                     <span className="intro-point">
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      {"Combined Major in Computer Science and Business"}
+                      {<span style={{fontStyle:"italic"}}>Combined Major in Computer Science and Business</span>}
                     </span>
                     <span className="intro-point">
                       <img alt="" width="25px" src={employment}></img> Looking
@@ -143,7 +143,7 @@ function App() {
                       <img src={github} width="35px" alt=""></img>
                     </a>
                     &nbsp;&nbsp;&middot;&nbsp;&nbsp;
-                    <img src={email} width="35px" alt=""></img>
+                    <Email></Email>
                   </div>
                 </Card.Body>
               </Card>
@@ -244,12 +244,12 @@ function App() {
                     </span></ListGroup.Item>
                     <ListGroup.Item><span className="tech-stack-headers">Frameworks & Libraries</span><span className="tech-stack">
                     <Col className="col-tech-icon"><Row className="row-tech-icon"><img alt="" className="tech-icon" src={django} style={{width:"60px"}}></img></Row><Row><span className="tech-stack">Django</span></Row></Col>
-                      <Col className="col-tech-icon"><Row className="row-tech-icon"><img alt="" className="tech-icon" src={jquery}></img></Row><Row><span className="tech-stack">jQuery</span></Row></Col>
+                      <Col className="col-tech-icon"><Row className="row-tech-icon"><img alt="" className="tech-icon" src={panda}></img></Row><Row><span className="tech-stack">Pandas</span></Row></Col>
                       <Col className="col-tech-icon"><Row className="row-tech-icon"><img alt="" className="tech-icon" src={postgresql}></img></Row><Row><span className="tech-stack">postgreSQL</span></Row></Col>
                       </span>
                     </ListGroup.Item>
                     <ListGroup.Item>
-                      <span className="tech-stack-headers">APIs</span><span className="tech-stack"><Row><Col>yfinance.py</Col><Col>Chart.js</Col></Row><span></span></span></ListGroup.Item>
+                    <span className="tech-stack-headers">APIs</span><span className="tech-stack"><Row><Col><a href="https://github.com/ranaroussi/yfinance">yfinance</a></Col><Col><a href="https://github.com/chartjs/Chart.js">Chart.js</a></Col></Row><span></span></span></ListGroup.Item>
                     <ListGroup.Item className="repo-btn">
                     <div className="btn from-right">Check it Out!<a href="https://github.com/Shin-Leo/optionsPOrtfolio"><span className="link-span"></span></a></div>
                     </ListGroup.Item>
