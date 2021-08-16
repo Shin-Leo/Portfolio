@@ -1,6 +1,6 @@
 import React from "react";
 // Import the BrowserRouter, Route and Link components
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 import Projects from "./components/Projects.js";
 import Resume from "./components/Resume.js";
 import Navbar from "react-bootstrap/Navbar";
@@ -155,14 +155,18 @@ function App() {
                     typewriter
                       .typeString("Hi!")
                       .pauseFor(500)
-                      .typeString(" My name is Leo")
+                      .typeString(" My name is ")
+                      .typeString(`<span class="intro-span" >Leo</span>`)
                       .pauseFor(250)
-                      .typeString(" and I like to build software.")
+                      .typeString(" and I like to ")
+                      .typeString(`<span class="intro-span" >build software.</span>`)
                       .pauseFor(500)
                       .typeString(
-                        " Feel free to contact me or check out some of my projects below!"
+                        " Feel free to "
                       )
-                      .start();
+                      .typeString(`<span class="intro-span">contact me</span>`)
+                      .typeString(" or check out some of my ")
+                      .typeString(`<span class="intro-span">projects below!</span>`).start();
                   }}
                   options={{ delay: 100 }}
                 />
@@ -190,13 +194,19 @@ function App() {
                 <Card.Header>Tech Stack</Card.Header>
                 <Card.Body>
                   <ListGroup variant="flush">
-                    <ListGroup.Item><span>
-                      Languages<Col><Row><img src={{python}}></img></Row><Row><span>Python</span></Row></Col>
-                      <Col><Row><img src={{javascript}}></img></Row><Row><span>Javascript</span></Row></Col>
-                      <Col><Row><img src={{typescript}}></img></Row><Row><span>Typescript</span></Row></Col>
+                    <ListGroup.Item><span className="tech-stack-headers">Languages</span><span className="tech-stack">
+                      <Col className="col-tech-icon"><Row className="row-tech-icon"><img  alt="" className="tech-icon" src={python}></img></Row><Row><span className="tech-stack">Python</span></Row></Col>
+                      <Col className="col-tech-icon"><Row className="row-tech-icon"><img  alt="" className="tech-icon" src={javascript}></img></Row><Row><span className="tech-stack">Javascript</span></Row></Col>
+                      <Col className="col-tech-icon"><Row className="row-tech-icon"><img  alt="" className="tech-icon" src={typescript}></img></Row><Row><span className="tech-stack">Typescript</span></Row></Col>
                     </span></ListGroup.Item>
-                    <ListGroup.Item><span>Frameworks & Libraries<Col><Row></Row><Row></Row></Col></span></ListGroup.Item>
-                    <ListGroup.Item><span>APIs<Col><Row></Row><Row></Row></Col></span></ListGroup.Item>
+                    <ListGroup.Item><span className="tech-stack-headers">Frameworks & Libraries</span><span className="tech-stack">
+                    <Col className="col-tech-icon"><Row className="row-tech-icon"><img alt="" className="tech-icon" src={flask}></img></Row><Row><span className="tech-stack">Flask</span></Row></Col>
+                      <Col className="col-tech-icon"><Row className="row-tech-icon"><img alt="" className="tech-icon" src={react}></img></Row><Row><span className="tech-stack">React</span></Row></Col>
+                      <Col className="col-tech-icon"><Row className="row-tech-icon"><img alt="" className="tech-icon" src={jquery}></img></Row><Row><span className="tech-stack">jQuery</span></Row></Col>
+                      </span>
+                    </ListGroup.Item>
+                    <ListGroup.Item>
+                      <span className="tech-stack-headers">APIs</span><span className="tech-stack"><Row><Col><a href="https://github.com/0xfe/vexflow">Vexflow.js</a></Col><Col><a href="https://github.com/tonaljs/tonal">Tonal.js</a></Col><Col><a href="https://github.com/Tonejs/Tone.js/">Tone.js</a></Col></Row><span></span></span></ListGroup.Item>
                   </ListGroup>{" "}
                   <div className="btn from-right">Check it Out!</div>
                 </Card.Body>
@@ -222,8 +232,23 @@ function App() {
             </Col>
             <Col sm={4}>
               <Card>
+              <Card.Header>Tech Stack</Card.Header>
                 <Card.Body>
-                  <Card.Text>Techonologies Used</Card.Text>
+                <ListGroup variant="flush">
+                    <ListGroup.Item><span className="tech-stack-headers">Languages</span><span className="tech-stack">
+                      <Col className="col-tech-icon"><Row className="row-tech-icon"><img  alt="" className="tech-icon" src={python}></img></Row><Row><span className="tech-stack">Python</span></Row></Col>
+                      <Col className="col-tech-icon"><Row className="row-tech-icon"><img  alt="" className="tech-icon" src={javascript}></img></Row><Row><span className="tech-stack">Javascript</span></Row></Col>
+                      <Col className="col-tech-icon"><Row className="row-tech-icon"><img  alt="" className="tech-icon" src={css}></img></Row><Row><span className="tech-stack">CSS</span></Row></Col>
+                    </span></ListGroup.Item>
+                    <ListGroup.Item><span className="tech-stack-headers">Frameworks & Libraries</span><span className="tech-stack">
+                    <Col className="col-tech-icon"><Row className="row-tech-icon"><img alt="" className="tech-icon" src={django} style={{width:"60px"}}></img></Row><Row><span className="tech-stack">Django</span></Row></Col>
+                      <Col className="col-tech-icon"><Row className="row-tech-icon"><img alt="" className="tech-icon" src={jquery}></img></Row><Row><span className="tech-stack">jQuery</span></Row></Col>
+                      <Col className="col-tech-icon"><Row className="row-tech-icon"><img alt="" className="tech-icon" src={postgresql}></img></Row><Row><span className="tech-stack">postgreSQL</span></Row></Col>
+                      </span>
+                    </ListGroup.Item>
+                    <ListGroup.Item>
+                      <span className="tech-stack-headers">APIs</span><span className="tech-stack"><Row><Col>yfinance.py</Col><Col>Chart.js</Col></Row><span></span></span></ListGroup.Item>
+                  </ListGroup>{" "}
                   <div className="btn from-left">Check it Out!</div>
                 </Card.Body>
               </Card>
