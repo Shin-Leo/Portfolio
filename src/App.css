@@ -106,7 +106,6 @@ body {
   backdrop-filter: blur(0px) saturate(180%);
   -webkit-backdrop-filter: blur(0px) saturate(180%);
   background-color: rgba(255, 255, 255, 0.75);
-  border-radius: 12px;
   border: 1px solid rgba(209, 213, 219, 0.3);
 }
 
@@ -115,11 +114,16 @@ body {
   justify-content: center;
   min-height: 350px;
   padding-bottom: 5%;
+  border-radius: 20px 20px 0px 0px;
   padding: 0;
 }
 
 .intro-point {
   padding: 4px;
+}
+
+.card-body {
+  border-radius: 20px 20px 0px 0px;
 }
 
 
@@ -229,11 +233,15 @@ body {
   width: 100%;
   border: none;
 }
+.card-header {
+  border-radius: 20px 20px 0px 0px;
+}
 
 .card-title {
   background-color: none;
   background: none;
   opacity: 100%;
+  border-radius: 20px 20px 0px 0px;
 }
 
 .wrapper {
@@ -403,15 +411,8 @@ body {
   position:relative; 
 }
 
-.card-header {
-  font-weight: bold;
-  background-color: #BCC5CC;
-  border-radius: 20px 20px 0px 0px;
-}
 
-.card {
-  border-radius: 20px 20px 0px 0px;
-}
+
 
 a { color: inherit;
     text-decoration: none; } 
@@ -447,4 +448,21 @@ a { color: inherit;
   display: flex;
   justify-content: center;
   padding: 10%;
+}
+
+.card-header {
+  font-weight: bold;
+  background-color: #BCC5CC;
+}
+
+.card {
+  border-radius: 20px 20px 0px 0px;
+}
+
+.profile-header {
+  border-radius: 20px 20px 0px 0px;
+}
+
+.card-img {
+  border-radius: 20px 20px 0px 0px;
 }

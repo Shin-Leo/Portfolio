@@ -71,7 +71,7 @@ function App() {
             <Col sm={1} className="side-col" width="10%"></Col>
             <Col sm={4}>
               <Card className="profile-card">
-                <Card.Header className="profile-header">
+                <Card.Header className="profile-header" style={{borderRadius: "20px 20px 0px 0px"}}>
                   <div className="wrapper">
                     <div className="profile-img-wrapper">
                       <img
@@ -177,7 +177,7 @@ function App() {
                       )
                       .start();
                   }}
-                  options={{ delay: 100 }}
+                  options={{ delay: 60 }}
                 />
               </div>
             </Col>
