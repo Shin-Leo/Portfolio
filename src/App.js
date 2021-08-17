@@ -15,6 +15,7 @@ import "./App.css";
 import profile from "./images/profile-image.jpg";
 import Typewriter from "typewriter-effect";
 import Email from "./components/Email.js";
+import Button from "react-bootstrap/Button"
 import {Link} from "react-scroll"
 
 import notation from "./images/notation.png";
@@ -451,9 +452,16 @@ function App() {
             <Col sm={1} className="side-col" width="10%"></Col>
           </Row>
         </Container>
-        <Container>
-          <div id="resume-div"></div>
+        <Container className="resume-container">
+          <Row className="resume-row">
+            <Col sm={1} className="side-col" width="45%"></Col>
+            <Col sm={3} className="middle-resume-col" width="10%">
+              <Button className="resume-download">Download Resume</Button>
+            </Col>
+            <Col sm={1} className="side-col" width="45%"></Col>
+          </Row>
         </Container>
+          <div id="resume-div"></div>
       </div>
     </BrowserRouter>
   );

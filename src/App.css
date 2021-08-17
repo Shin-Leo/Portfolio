@@ -466,3 +466,26 @@ a { color: inherit;
 .card-img {
   border-radius: 20px 20px 0px 0px;
 }
+
+.resume-download {
+  background-color: #455F73;
+  color: #e5ecf1;
+  border: none;
+}
+
+.resume-download:hover {
+  background-color: #e5ecf1;
+  color: #455F73;
+}
+
+.middle-resume-col {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.resume-container {
+  background-color: #8B9AA6;
+  margin: 0px 0px 0px 0px;
+  min-width: 100%;
+}
