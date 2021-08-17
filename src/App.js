@@ -53,17 +53,23 @@ function App() {
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="me-auto"></Nav>
               <Nav>
-              <Link to="about" spy={true} smooth={true} duration={500}>About &nbsp;&middot;&nbsp;</Link>
-              <Link to="projects" spy={true} smooth={true} duration={500}>Projects &nbsp;&middot;&nbsp;</Link> 
-                <Link to="resume-div" spy={true} smooth={true} duration={150} delay={0}>Resume</Link>
+              <div className="btn nav-button" role="button" aria-pressed="false" style={{cursor: "pointer"}}>
+              <Link to="about" spy={true} smooth={true} duration={100} delay={0}>About</Link>
+              </div>
+              <div className="btn nav-button" role="button" aria-pressed="false" style={{cursor: "pointer"}}>
+              <Link to="projects" spy={true} smooth={true} duration={100} delay={0}>Projects</Link> 
+              </div>
+              <div className="btn nav-button" role="button" aria-pressed="false" style={{cursor: "pointer"}}>
+              <Link to="resume-div" spy={true} smooth={true} duration={100} delay={0}>Resume</Link>
+              </div>
               </Nav>
             </Navbar.Collapse>
           </Container>
         </Navbar>
         <Container inline-flex="true" className="profile-section">
-          <Row style={{ minHeight: "600px" }}>
+          <Row>
             <Col sm={1} className="side-col" width="10%"></Col>
-            <Col sm={5}>
+            <Col sm={4}>
               <Card className="profile-card">
                 <Card.Header className="profile-header">
                   <div className="wrapper">
@@ -78,7 +84,8 @@ function App() {
                       style={{
                         fontSize: "x-large",
                         paddingTop: "200px",
-                        fontWeight: 150,
+                        fontWeight: "bold",
+                        color: "#455F73"
                       }}
                     >
                       Leo Shin
@@ -97,6 +104,16 @@ function App() {
                       &nbsp; Software Engineer
                     </span>
                     <span className="intro-point">
+                
+                      <img
+                        alt=""
+                        className="icon"
+                        width="25px"
+                        src={employment}
+                      ></img>{" "}
+                      &nbsp; Looking for Summer 2022 opportunities!
+                    </span>
+                    <span className="intro-point">
                       <img
                         className="icon"
                         alt=""
@@ -106,21 +123,12 @@ function App() {
                       &nbsp; University of British Columbia
                     </span>
                     <span className="intro-point">
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
                       {
                         <span style={{ fontStyle: "italic" }}>
                           &nbsp; Combined Major in Computer Science and Business
                         </span>
                       }
-                    </span>
-                    <span className="intro-point">
-                      <img
-                        alt=""
-                        className="icon"
-                        width="25px"
-                        src={employment}
-                      ></img>
-                      &nbsp; Looking for Summer 2022 opportunities!
                     </span>
                   </div>
                   <div className="divider div-transparent div-arrow-down"></div>
@@ -146,7 +154,7 @@ function App() {
                 </Card.Body>
               </Card>
             </Col>
-            <Col sm={4} className="text-col">
+            <Col sm={5} className="text-col">
               <div id="generated-text">
                 <Typewriter
                   onInit={(typewriter) => {
@@ -179,7 +187,8 @@ function App() {
         <Container inline-flex="true" className="project-card">
         <div id="projects"></div>
           <Row>
-            <Col sm={8}>
+            <Col sm={1} className="side-col" width="10%"></Col>
+            <Col sm={6}>
               <Card className="bg-dark text-white">
                 <Card.Img src={notation} alt="Card image" />
                 <Card.ImgOverlay>
@@ -191,7 +200,7 @@ function App() {
                 </Card.ImgOverlay>
               </Card>
             </Col>
-            <Col sm={4}>
+            <Col sm={3}>
               <Card>
                 <Card.Header>Tech Stack</Card.Header>
                 <Card.Body>
@@ -307,11 +316,13 @@ function App() {
                 </Card.Body>
               </Card>
             </Col>
+            <Col sm={1} className="side-col" width="10%"></Col>
           </Row>
         </Container>
         <Container inline-flex="true" className="project-card-reverse">
           <Row>
-            <Col sm={8}>
+            <Col sm={1} className="side-col" width="10%"></Col>
+            <Col sm={6}>
               <Card className="bg-dark text-white">
                 <Card.Body>
                   <Card.Img src={graphs} alt="Card image" />
@@ -325,7 +336,7 @@ function App() {
                 </Card.Body>
               </Card>
             </Col>
-            <Col sm={4}>
+            <Col sm={3}>
               <Card>
                 <Card.Header>Tech Stack</Card.Header>
                 <Card.Body>
@@ -437,6 +448,7 @@ function App() {
                 </Card.Body>
               </Card>
             </Col>
+            <Col sm={1} className="side-col" width="10%"></Col>
           </Row>
         </Container>
         <Container>
