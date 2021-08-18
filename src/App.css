@@ -467,38 +467,6 @@ a { color: inherit;
   border-radius: 20px 20px 0px 0px;
 }
 
-.resume-download {
-  background-color: #455F73;
-  color: #e5ecf1;
-  border: none;
-  width: 12em;
-  height: 4em;
-}
-.resume-download:hover {
-  background-color: #e5ecf1;
-  border-color: #455F73;
-  color: #455F73;
-}
-
-.resume-download:click {
-  background-color: #e5ecf1;
-  border-color: #455F73;
-  color: #455F73;
-}
-
-.resume-download:active {
-  background-color: #e5ecf1;
-  border-color: #455F73;
-  color: #455F73;
-}
-
-.resume-download:focus {
-  background-color: #e5ecf1;
-  border-color: #455F73;
-  color: #455F73;
-  box-shadow: 0 0 0 0.25rem #455f73;
-}
-
 .middle-resume-col {
   display: flex;
   justify-content: center;
@@ -549,4 +517,41 @@ a { color: inherit;
 ::-webkit-scrollbar-track-piece:start {
   background: transparent;
   margin-top: 56px;
+}
+
+
+.resume-download {
+  position: relative;
+  background-color: #455F73;
+  color: #e5ecf1;
+  border: none;
+  width: 12em;
+  height: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.resume-download:hover {
+  background-color: #e5ecf1;
+  border-color: #455F73;
+  color: #455F73;
+}
+
+.resume-download:click {
+  background-color: #e5ecf1;
+  border-color: #455F73;
+  color: #455F73;
+}
+
+.resume-download:active {
+  background-color: #e5ecf1;
+  border-color: #455F73;
+  color: #455F73;
+}
+
+.resume-download:focus {
+  background-color: #e5ecf1;
+  border-color: #455F73;
+  color: #455F73;
+  box-shadow: 0 0 0 0.25rem #455f73;
 }

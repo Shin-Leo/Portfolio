@@ -15,7 +15,6 @@ import "./App.css";
 import profile from "./images/profile-image.jpg";
 import Typewriter from "typewriter-effect";
 import Email from "./components/Email.js";
-import Button from "react-bootstrap/Button"
 import {Link} from "react-scroll"
 
 import notation from "./images/notation.png";
@@ -39,6 +38,8 @@ import python from "./images/python.svg";
 import panda from "./images/panda.svg";
 import react from "./images/react.svg";
 import typescript from "./images/typescript.svg";
+
+import resume from "./documents/resume.pdf"
 
 
 function App() {
@@ -449,7 +450,11 @@ function App() {
           <Row className="resume-row">
             <Col sm={1} className="side-col" width="45%"></Col>
             <Col sm={3} className="middle-resume-col" width="10%">
-              <Button className="resume-download">Download Resume</Button>
+              <div className="btn resume-download">Download Resume
+              <a download={"Shin-Leo-Resume"} href={resume}>
+              <span className="link-span"></span>
+</a>
+              </div>
             </Col>
             <Col sm={1} className="side-col" width="45%"></Col>
           </Row>
