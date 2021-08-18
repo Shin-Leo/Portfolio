@@ -90,9 +90,9 @@ body {
 #generated-text {
   font-size: xxx-large;
   font-family: 'Vollkorn', serif;
+  color: #455F73;
   width:100%;
   text-align: justify;
-  color: #455F73;
 }
 
 .tech-stack-headers {
@@ -142,7 +142,7 @@ body {
   margin: 30px auto 20px  auto;
   left: 0;
   right: 0;
-  margin-bottom: 7%;
+  margin-bottom: 9%;
 }
 
 .icon {
@@ -471,11 +471,32 @@ a { color: inherit;
   background-color: #455F73;
   color: #e5ecf1;
   border: none;
+  width: 12em;
+  height: 4em;
 }
-
 .resume-download:hover {
   background-color: #e5ecf1;
+  border-color: #455F73;
   color: #455F73;
+}
+
+.resume-download:click {
+  background-color: #e5ecf1;
+  border-color: #455F73;
+  color: #455F73;
+}
+
+.resume-download:active {
+  background-color: #e5ecf1;
+  border-color: #455F73;
+  color: #455F73;
+}
+
+.resume-download:focus {
+  background-color: #e5ecf1;
+  border-color: #455F73;
+  color: #455F73;
+  box-shadow: 0 0 0 0.25rem #455f73;
 }
 
 .middle-resume-col {
@@ -488,4 +509,44 @@ a { color: inherit;
   background-color: #8B9AA6;
   margin: 0px 0px 0px 0px;
   min-width: 100%;
+}
+
+#full-name {
+  font-size: xx-large;
+  padding-top: 200px;
+  font-weight: bold;
+  font-family: 'Vollkorn', serif;
+  color: #455F73;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #BCC5CC;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #455F73; 
+}
+::-webkit-scrollbar-thumb:active {
+  background: #455F73; 
+}
+
+
+
+::-webkit-scrollbar-track-piece:start {
+  background: transparent;
+  margin-top: 56px;
 }

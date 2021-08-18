@@ -81,14 +81,7 @@ function App() {
                         alt=""
                       ></img>
                     </div>
-                    <span
-                      style={{
-                        fontSize: "x-large",
-                        paddingTop: "200px",
-                        fontWeight: "bold",
-                        color: "#455F73"
-                      }}
-                    >
+                    <span id="full-name">
                       Leo Shin
                     </span>
                   </div>
