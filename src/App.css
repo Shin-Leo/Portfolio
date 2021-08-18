@@ -268,6 +268,7 @@ body {
 
 .intro-info {
   display: flex;
+  font-size: large;
   flex-direction: column;
   align-items: flex-start;
   padding-top: 10px;
@@ -520,6 +521,11 @@ a { color: inherit;
 }
 
 
+#project-description {
+  color: rgb(85, 85, 85);
+}
+
+
 .resume-download {
   position: relative;
   background-color: #455F73;
@@ -555,3 +561,4 @@ a { color: inherit;
   color: #455F73;
   box-shadow: 0 0 0 0.25rem #455f73;
 }
+

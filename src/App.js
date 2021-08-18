@@ -188,7 +188,7 @@ function App() {
                 <Card.Img src={notation} alt="Card image" />
                 <Card.ImgOverlay>
                   <Card.Title>reHarmonizer</Card.Title>
-                  <Card.Text>
+                  <Card.Text id="project-description">
                     Flask project for reharmonizing a small section of a song
                     when given the chord progression and the main melody.
                   </Card.Text>
@@ -197,7 +197,7 @@ function App() {
             </Col>
             <Col sm={3}>
               <Card>
-                <Card.Header>Tech Stack</Card.Header>
+                <Card.Header className="h5">Tech Stack</Card.Header>
                 <Card.Body>
                   <ListGroup variant="flush">
                     <ListGroup.Item>
@@ -323,7 +323,7 @@ function App() {
                   <Card.Img src={graphs} alt="Card image" />
                   <Card.ImgOverlay>
                     <Card.Title>Options Portfolio</Card.Title>
-                    <Card.Text text="dark">
+                    <Card.Text id="project-description">
                       Django project for simulating a portfolio of options
                       strategies using the yfinance api.
                     </Card.Text>
@@ -333,7 +333,7 @@ function App() {
             </Col>
             <Col sm={3}>
               <Card>
-                <Card.Header>Tech Stack</Card.Header>
+                <Card.Header className="h5">Tech Stack</Card.Header>
                 <Card.Body>
                   <ListGroup variant="flush">
                     <ListGroup.Item>
