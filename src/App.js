@@ -37,6 +37,7 @@ import postgresql from "./images/postgresql.svg";
 import python from "./images/python.svg";
 import panda from "./images/panda.svg";
 import react from "./images/react.svg";
+import numpy from "./images/numpy.svg"
 import typescript from "./images/typescript.svg";
 
 import resume from "./documents/resume.pdf"
@@ -256,10 +257,10 @@ function App() {
                         </Col>
                         <Col className="col-tech-icon">
                           <Row className="row-tech-icon">
-                            <img alt="" className="tech-icon" src={react}></img>
+                            <img alt="" className="tech-icon" src={numpy}></img>
                           </Row>
                           <Row>
-                            <span className="tech-stack">React</span>
+                            <span className="tech-stack">NumPy</span>
                           </Row>
                         </Col>
                         <Col className="col-tech-icon">
